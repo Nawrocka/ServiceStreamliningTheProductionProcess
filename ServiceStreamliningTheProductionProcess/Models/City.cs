@@ -13,8 +13,8 @@ namespace ServiceStreamliningTheProductionProcess.Models
         [StringLength(30)]
         public string Name { get; set; }
         [Range(0, 999.99, ErrorMessage = "Delivery costs cannot exceed {1} $.")] 
-        public float DeliveryCosts { get; set; }
-        public float HourlyWage { get; set; }
-        public ICollection<SearchHistory> SearchHistories { get; set; }
+        public double TransportCost { get; set; }
+        public double CostOfWorkingHour { get; set; }
+        public virtual SearchHistory SearchHistory { get; set; }
     }
 }

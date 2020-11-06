@@ -12,8 +12,8 @@ namespace ServiceStreamliningTheProductionProcess.Context
         //public CalculatorContext(DbContextOptions<CalculatorContext> options)
         //: base(options) { }
         public CalculatorContext()
-            : base("name=ConnectionString") { }
-            public DbSet<City> City { get; set; }
+            : base("name=DefaultConnection") { }
+        public DbSet<City> City { get; set; }
         public DbSet<Module> Module { get; set; }
         public DbSet<SearchHistory> SearchHistory { get; set; }
 

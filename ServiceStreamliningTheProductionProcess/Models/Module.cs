@@ -12,9 +12,11 @@ namespace ServiceStreamliningTheProductionProcess.Models
         public int Id { get; set; }
         public int Code { get; set; }
         public string Name { get; set; }
-        public float Weight { get; set; }
+        public double Price { get; set; } //in case of larger calulation I'd use decimal type
+        public double AssemblyTime { get; set; }        
+        public double Weight { get; set; }
         [StringLength(300)]
         public string Description { get; set; }
-        public ICollection<SearchHistory> SearchHistories { get; set; }
+        public virtual SearchHistory SearchHistory { get; set; }
     }
 }
