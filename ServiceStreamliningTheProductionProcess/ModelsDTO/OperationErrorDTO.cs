@@ -7,6 +7,6 @@ namespace ServiceStreamliningTheProductionProcess.ModelsDTO
 {
     public class OperationErrorDTO : OperationResultDTO
     {
-        public string Message { get; set; }
+        public int Code { get; set; }
     }
 }

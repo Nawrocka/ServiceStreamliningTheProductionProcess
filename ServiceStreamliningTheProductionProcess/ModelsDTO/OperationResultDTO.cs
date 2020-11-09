@@ -7,6 +7,6 @@ namespace ServiceStreamliningTheProductionProcess.ModelsDTO
 {
     public class OperationResultDTO
     {
-        public int Code { get; set; }
+        public string Message { get; set; }
     }
 }
