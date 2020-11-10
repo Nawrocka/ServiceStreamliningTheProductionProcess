@@ -10,10 +10,10 @@ namespace ServiceStreamliningTheProductionProcess.Models
     {
         public int Id { get; set; }
         public int CityId { get; set; }
-        public int ModuleName1 { get; set; }
-        public int ModuleName2 { get; set; }
-        public int ModuleName3 { get; set; }
-        public int ModuleName4 { get; set; }
+        public string ModuleName1 { get; set; }
+        public string ModuleName2 { get; set; }
+        public string ModuleName3 { get; set; }
+        public string ModuleName4 { get; set; }
         //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         //public DateTime DateOfLastSearching { get; set; }
         public double ProductionCost { get; set; }
