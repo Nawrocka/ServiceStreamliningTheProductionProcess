@@ -82,6 +82,7 @@ namespace ServiceStreamliningTheProductionProcess.Services.Implemenatations
 
             return new ResultCostDTO { InSearchHistory = false };
         }
+
         private int ModuleHasValue(SearchHistory SearchHistory)
         {
             int counter = 0;
