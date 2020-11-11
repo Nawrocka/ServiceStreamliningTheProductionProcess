@@ -1,4 +1,5 @@
-﻿using ServiceStreamliningTheProductionProcess.Context;
+﻿using ServiceStreamliningTheProductionProcess.App_Start;
+using ServiceStreamliningTheProductionProcess.Context;
 using ServiceStreamliningTheProductionProcess.Services.Implemenatations;
 using ServiceStreamliningTheProductionProcess.Services.Interfaces;
 using SimpleInjector;
@@ -32,7 +33,9 @@ namespace ServiceStreamliningTheProductionProcess
             GlobalConfiguration.Configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
 
             AreaRegistration.RegisterAllAreas();
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
