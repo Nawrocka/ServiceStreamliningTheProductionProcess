@@ -26,14 +26,14 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpGet]
-        [Route("/Cities/GetCities")]
+        [Route("Cities/GetCities")]
         public IHttpActionResult GetCities() //there could be if(list == null)
         {
             return Content(HttpStatusCode.OK, cityService.GetCities().Result);
         }
 
         [HttpGet]
-        [Route("/Cities/GetCityByName/{name}")]
+        [Route("Cities/GetCityByName/{name}")]
         [ResponseType(typeof(City))]
         public IHttpActionResult GetCityByName(string cityName)
         {
@@ -48,7 +48,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpPut]
-        [Route("/Cities/UpdateTransportCost")]
+        [Route("Cities/UpdateTransportCost")]
         public IHttpActionResult UpdateTransportCost(City city)
         {
             var response = cityService.UpdateTransportCost(city.Name, city.TransportCost);
@@ -76,7 +76,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpPost]
-        [Route("/Cities/AddCity")]
+        [Route("Cities/AddCity")]
         [ResponseType(typeof(void))]
         public IHttpActionResult AddCity(City city)
         {
@@ -96,7 +96,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpDelete]
-        [Route("/Cities/DeleteCity/{name}")]
+        [Route("Cities/DeleteCity/{name}")]
         [ResponseType(typeof(void))]
         public IHttpActionResult DeleteCity(string name) //There is validation of city == null so next time meybe do different logic here
         {

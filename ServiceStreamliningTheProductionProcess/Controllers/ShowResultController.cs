@@ -20,7 +20,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpPost]
-        [Route("/ShowResult/GetCost")]
+        [Route("ShowResult/GetCost")]
         [ResponseType(typeof(ResultCostDTO))]
         public IHttpActionResult GetCost(ShowResultDTO showResultDTO)
         {            

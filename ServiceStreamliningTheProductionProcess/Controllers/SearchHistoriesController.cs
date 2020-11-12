@@ -21,7 +21,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpPost]
-        [Route("/SearchHistories/AddSearchHistory")]
+        [Route("SearchHistories/AddSearchHistory")]
         [ResponseType(typeof(void))]
         public IHttpActionResult AddSearchHistory(SearchHistory searchHistory)
         {
@@ -40,7 +40,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
         
         [HttpGet]
-        [Route("/SearchHistories/GetSearchHistories")]
+        [Route("SearchHistories/GetSearchHistories")]
         public IHttpActionResult GetSearchHistories()
         {
             return Content<IList<SearchHistory>>(HttpStatusCode.OK, searchHistoryService.GetSearchHistories().Result);

@@ -30,6 +30,9 @@ namespace ServiceStreamliningTheProductionProcess
             container.Register<ISearchHistoryService, SearchHistoryService>(Lifestyle.Scoped);
             container.Register<IShowResultService, ShowResultService>(Lifestyle.Scoped);
 
+            container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
+            container.Verify();
+
             GlobalConfiguration.Configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
 
             AreaRegistration.RegisterAllAreas();

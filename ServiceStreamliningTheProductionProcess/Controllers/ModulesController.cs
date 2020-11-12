@@ -20,7 +20,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpPost]
-        [Route("/Modules/AddModule")]
+        [Route("Modules/AddModule")]
         [ResponseType(typeof(void))]
         public IHttpActionResult AddModule(Module module)
         {
@@ -43,7 +43,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpDelete]
-        [Route("/Modules/Delete/{name}")]
+        [Route("Modules/Delete/{name}")]
         [ResponseType(typeof(void))]
         public IHttpActionResult DeleteModule(string name)
         {
@@ -65,7 +65,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpGet]
-        [Route("/Modules/GetModuleByName/{name}")]
+        [Route("Modules/GetModuleByName/{name}")]
         [ResponseType(typeof(Module))]
         public IHttpActionResult GetModuleByName(string moduleName)
         {
@@ -80,7 +80,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpGet]
-        [Route("/Modules/GetModules")]
+        [Route("Modules/GetModules")]
         public IHttpActionResult GetModules()
         {
             var modules = moduleService.GetModules();
@@ -97,7 +97,7 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpPut]
-        [Route("/Modules/UpdateModule")]
+        [Route("Modules/UpdateModule")]
         public IHttpActionResult UpdateModule(Module module)
         {
             var response = moduleService.UpdateModule(module);
