@@ -157,6 +157,9 @@
     <Compile Include="Context\CalculatorContext.cs" />
     <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ModulesController.cs" />
+    <Compile Include="Controllers\SearchHistoriesController.cs" />
+    <Compile Include="Controllers\ShowResultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +177,7 @@
     <Compile Include="ModelsDTO\OperationResultDTO.cs" />
     <Compile Include="ModelsDTO\OperationSuccesDTO.cs" />
     <Compile Include="ModelsDTO\ResultCostDTO.cs" />
+    <Compile Include="ModelsDTO\ShowResultDTO.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Models\SearchHistory.cs" />

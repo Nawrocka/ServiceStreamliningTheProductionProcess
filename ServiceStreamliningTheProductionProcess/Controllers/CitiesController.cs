@@ -33,9 +33,9 @@ namespace ServiceStreamliningTheProductionProcess.Controllers
         }
 
         [HttpGet]
-        [Route("/Cities/GetCitiesByName/{name}")]
+        [Route("/Cities/GetCityByName/{name}")]
         [ResponseType(typeof(City))]
-        public IHttpActionResult GetCitiesByName(string cityName)
+        public IHttpActionResult GetCityByName(string cityName)
         {
             City city = cityService.GetCityByName(cityName);
 

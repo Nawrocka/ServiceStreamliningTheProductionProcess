@@ -11,27 +11,20 @@ namespace ServiceStreamliningTheProductionProcess.Services.Implemenatations
 {
     public class ShowResultService : IShowResultService
     {
-        //private readonly CalculatorContext context;
         private readonly ICityService cityService;
-        //private readonly IModuleService moduleService;
-        //CalculatorContext context,  IModuleService moduleService
         private readonly ICalculatorService calculatorService;
         private readonly ISearchHistoryService searchHistoryService;
 
         public ShowResultService(ICalculatorService calculatorService, ISearchHistoryService searchHistoryService, ICityService cityService)
         {
-            //this.context = context;
             this.cityService = cityService;
-            //this.moduleService = moduleService;
             this.calculatorService = calculatorService;
             this.searchHistoryService = searchHistoryService;
         }
 
         public ResultCostDTO PresentResult(string cityName, ModuleListDTO moduleListDTO)
         {
-
-            var checkedInSearchHistory = searchHistoryService.GetSearchHistory(cityName, moduleListDTO);
-            OperationSuccesDTO<ResultCostDTO> calculateCost;
+            var checkedInSearchHistory = searchHistoryService.GetSearchHistory(cityName, moduleListDTO);            
 
             if (checkedInSearchHistory.InSearchHistory)
             {
@@ -40,6 +33,7 @@ namespace ServiceStreamliningTheProductionProcess.Services.Implemenatations
             }
             else
             {
+                OperationSuccesDTO<ResultCostDTO> calculateCost;
                 try
                 {
                     calculateCost = (OperationSuccesDTO<ResultCostDTO>)calculatorService.CalculateCost(cityName, moduleListDTO);
